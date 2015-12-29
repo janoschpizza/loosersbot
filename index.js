@@ -7,6 +7,9 @@ app.get('/', function (request, response) {
 	response.send("I'm alive!")
 })
 
+app.get('/trigger/bitchslap', function (request, response) {
+	response.send('{ "text": "Hello there!" }')
+})
 
 /*** Prepare and Launch server proc ***/
 
