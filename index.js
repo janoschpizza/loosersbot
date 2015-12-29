@@ -17,7 +17,7 @@ app.get('/', function (request, response) {
 app.post('/trigger/bitchslap', function (request, response) {
 	console.log(request.body)
 	var payload = {
-		text: ':fish: *'+request.body.user_name+'* slaps *'+request.body.text+'* around with a large trout.',
+		text: '*'+request.body.user_name+'* slaps *'+request.body.text+'* around with a large trout. :fish:',
 		response_type: 'in_channel'
 	}
 	response.json(payload)
