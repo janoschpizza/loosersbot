@@ -15,7 +15,8 @@ app.get('/', function (request, response) {
 })
 
 app.post('/trigger/bitchslap', function (request, response) {
-	console.log(request.body)
+	
+	// Format a Slack command response (https://api.slack.com/slash-commands)
 	var payload = {
 		text: '*'+request.body.user_name+'* slaps *'+request.body.text+'* around with a large trout.',
 		response_type: 'in_channel'
