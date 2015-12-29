@@ -5,17 +5,18 @@ var bodyParser = require('body-parser')
 
 /*** App configuration ***/
 var app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  // Tell Express to parse POST requests as JSON
 
-
 /*** Routing points ***/
-app.get('/', function (request, response, next) {
+app.get('/', function (request, response) {
 	response.send("I'm alive!")
 })
 
 app.post('/trigger/bitchslap', function (request, response) {
-	console.log(request.body)
-	response.json({ text: 'Hello there, '+body.user_name+'!' })
+	console.log(request.body.user_name)
+	response.json({ text: 'Hello there, '+request.body.user_name+'!' })
 })
 
 
