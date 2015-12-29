@@ -9,7 +9,7 @@ app.use(bodyParser.json())  // Tell Express to parse POST requests as JSON
 
 
 /*** Routing points ***/
-app.get('/', function (request, response) {
+app.get('/', function (request, response, next) {
 	response.send("I'm alive!")
 })
 
