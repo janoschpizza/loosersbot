@@ -8,8 +8,7 @@ app.get('/', function (request, response) {
 })
 
 app.post('/trigger/bitchslap', function (request, response) {
-	console.log(request)
-	response.send('{ "text": "Hello there!" }')
+	response.json({ text: 'Hello there!' })
 })
 
 /*** Prepare and Launch server proc ***/
