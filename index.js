@@ -10,15 +10,20 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  // Tell Express to parse POST requests as JSON
 
 /*** Routing points ***/
+
+// Default route
 app.get('/', function (request, response) {
 	response.send("I'm alive!")
 })
 
+// Slack 'bitchslap' slash-command 
 app.post('/trigger/bitchslap', function (request, response) {
-	
+	// response.body contains a {..} with Slack data
+	var slack = request.body
+
 	// Format a Slack command response (https://api.slack.com/slash-commands)
 	var payload = {
-		text: '*'+request.body.user_name+'* slaps *'+request.body.text+'* around with a large trout.',
+		text: '*'+slack.user_name+'* slaps *'+slack.text+'* around with a large trout.',
 		response_type: 'in_channel'
 	}
 	response.json(payload)
