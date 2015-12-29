@@ -14,7 +14,7 @@ app.get('/', function (request, response) {
 })
 
 app.post('/trigger/bitchslap', function (request, response) {
-	var body = request.body
+	console.log(request.body)
 	response.json({ text: 'Hello there, '+body.user_name+'!' })
 })
 
