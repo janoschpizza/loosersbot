@@ -7,7 +7,8 @@ app.get('/', function (request, response) {
 	response.send("I'm alive!")
 })
 
-app.get('/trigger/bitchslap', function (request, response) {
+app.post('/trigger/bitchslap', function (request, response) {
+	console.log(request)
 	response.send('{ "text": "Hello there!" }')
 })
 
