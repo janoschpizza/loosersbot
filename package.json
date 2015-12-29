@@ -1,0 +1,28 @@
+{
+  "name": "loosersbot",
+  "version": "1.0.0",
+  "description": "Versatile Slack Bot",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janoschpizza/loosersbot.git"
+  },
+  "keywords": [
+    "slack",
+    "bot",
+    "node"
+  ],
+  "author": "Don Fuego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janoschpizza/loosersbot/issues"
+  },
+  "homepage": "https://github.com/janoschpizza/loosersbot#readme"
+}
