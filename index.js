@@ -1,8 +1,14 @@
+/*** Dependencies ***/
 var express = require('express')
+var bodyParser = require('body-parser')
+
+
+/*** App configuration ***/
 var app = express()
+app.use(bodyParser.json())  // Tell Express to parse POST requests as JSON
+
 
 /*** Routing points ***/
-
 app.get('/', function (request, response) {
 	response.send("I'm alive!")
 })
@@ -11,6 +17,7 @@ app.post('/trigger/bitchslap', function (request, response) {
 	var body = request.body
 	response.json({ text: 'Hello there, '+body.user_name+'!' })
 })
+
 
 /*** Prepare and Launch server proc ***/
 
